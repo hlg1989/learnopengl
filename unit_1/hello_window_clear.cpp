@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
+#include <unistd.h>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -31,12 +32,36 @@ int main()
         return -1;
     }
 
+    int count = 0;
 
     while(!glfwWindowShouldClose(window)){
 
+        usleep(100 * 1000);
         processInput(window);
 
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        count++;
+        int mod_val = count % 5;
+        switch (mod_val){
+            case 0:
+                glClearColor(0.2f, 0.2f, 0.2f, 0);
+                break;
+            case 1:
+                glClearColor(0.5f, 0.5f, 0.5f, 0);
+                break;
+            case 2:
+                glClearColor(1, 0, 0, 0);
+                break;
+            case 3:
+                glClearColor(0, 1, 0, 0);
+                break;
+            case 4:
+                glClearColor(0, 0, 1, 0);
+                break;
+            default:
+                glClearColor(1.0f, 1.0f, 1.0f, 0);
+                break;
+        }
+
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(window);
@@ -52,8 +77,10 @@ int main()
 void processInput(GLFWwindow* window)
 {
 
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        std::cout << "Has detected esc key are Pressed..." << std::endl;
         glfwSetWindowShouldClose(window, true);
+    }
 }
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)

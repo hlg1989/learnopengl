@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(./glad/include)
 
-set(SOURCE_FILES hello_window_clear.cpp glad/src/glad.c)
+set(SOURCE_FILES hello_triangle_indexed.cpp glad/src/glad.c)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
