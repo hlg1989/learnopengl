@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/unit_1_coordinate_systems.dir/camera_class.cpp.o CMakeFiles/unit_1_coordinate_systems.dir/glad/src/glad.c.o  -o unit_1_coordinate_systems -lGLEW -lrt -lm -ldl -lglfw -lGL -lX11 -lpthread -lXrandr -lXi 
