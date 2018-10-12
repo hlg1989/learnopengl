@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(glad/include)
 
-set(SOURCE_FILES  parallax_occlusion_mapping.cpp glad/src/glad.c)
+set(SOURCE_FILES  deferred_shading.cpp glad/src/glad.c)
 
 add_executable(unit5_advanced_lighting ${SOURCE_FILES})
 
