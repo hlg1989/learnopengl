@@ -7,11 +7,11 @@ Texture2D::Texture2D()
     , Internal_Format(GL_RGB)
     , Image_Format(GL_RGB)
     , Wrap_S(GL_REPEAT)
-    , Wrap_S(GL_REPEAT)
+    , Wrap_T(GL_REPEAT)
     , Filter_Min(GL_LINEAR)
     , Filter_Max(GL_LINEAR)
 {
-    glGenTextures(1, ID);
+    glGenTextures(1, &ID);
 }
 
 void Texture2D::Generate(GLuint width, GLuint height, unsigned char *data)

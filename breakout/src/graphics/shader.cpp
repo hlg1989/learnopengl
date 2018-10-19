@@ -3,8 +3,8 @@
 //
 
 #include "shader.h"
-
 #include <iostream>
+
 
 Shader& Shader::use()
 {
@@ -93,7 +93,7 @@ void Shader::SetVector3f(const GLchar *name, const glm::vec3 &value, GLboolean u
 }
 
 
-void Shader::SetVector3f(const GLchar *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w, GLboolean useShader)
+void Shader::SetVector4f(const GLchar *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w, GLboolean useShader)
 {
     if(useShader)
         use();

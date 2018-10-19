@@ -5,9 +5,9 @@
 #ifndef BREAKOUT_SHADER_H
 #define BREAKOUT_SHADER_H
 
+#include <glad/glad.h>
 #include <string>
-#include <GL/gl.h>
-#include <GL/glew.h>
+
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -19,7 +19,7 @@ public:
     Shader() { }
     Shader& use();
 
-    void Compile(const GLchar* vertexSource, const GLchar* fragmentSource, const GLchar* geometrySource);
+    void Compile(const GLchar* vertexSource, const GLchar* fragmentSource, const GLchar* geometrySource = nullptr);
 
     void SetFloat(const GLchar* name, GLfloat value, GLboolean useShader = false);
     void SetInteger(const GLchar* name, GLint value, GLboolean useShader = false);

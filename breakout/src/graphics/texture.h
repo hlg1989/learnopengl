@@ -5,6 +5,8 @@
 #ifndef BREAKOUT_TEXTURE_H
 #define BREAKOUT_TEXTURE_H
 
+#include <glad/glad.h>
+
 class Texture2D
 {
 public:
